@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Congrats = ({ success }) => {
+interface CommponentProps {
+    success: boolean;
+}
+
+const Congrats = (props: CommponentProps) => {
     if (props.success) {
         return (
             <div data-test="component-congrats">
