@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Input = (props) => {
+interface InputProps {
+    success: boolean,
+}
+
+const Input = (props: InputProps) => {
     return (
         <div data-test='component-input'>
-            
         </div>
     );
 };
