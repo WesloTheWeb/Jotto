@@ -52,8 +52,8 @@ describe('If there are words guessed', () => {
         expect(guessedWordsNode.length).toBe(1);
     });
 
-    test('correct number of guessed words', () => {
-        const guessedWordsNodes = findByTestAttr(wrapper, 'guessed-word');
-        expect(guessedWords.length).toBe(guessedWords.length);
+    test('correct number of letters for the secret word in guessed words', () => {
+        const guessedWordsNodes = findByTestAttr(wrapper, 'letters-matched-count');
+        expect(guessedWordsNodes.length).toBe(guessedWords.length);
     });
 });

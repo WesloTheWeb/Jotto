@@ -17,7 +17,7 @@ const GuessedWords = (props: GuessedWordProps) => {
     } else {
         const guessedWordsRows = props.guessedWords.map((word, index) => (
             <>
-                <div data-test="guessed-word">
+                <div data-test="guessed-word" className="border-2">
                     <span key={index}>{word.guessedWord}</span>
                 </div>
             </>
@@ -26,7 +26,9 @@ const GuessedWords = (props: GuessedWordProps) => {
         const letterMatchRow = props.guessedWords.map((word, index) => {
             return (
                 <>
-                    <div data-test="guessed-word" key={index}>{word.letterMatchCount}</div>
+                    <div data-test="letters-matched-count" className="border-2" >
+                        <span key={index}>{word.letterMatchCount}</span>
+                    </div>
                 </>
             )
         });
