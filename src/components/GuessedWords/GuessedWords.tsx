@@ -16,29 +16,35 @@ const GuessedWords = (props: GuessedWordProps) => {
         );
     } else {
         const guessedWordsRows = props.guessedWords.map((word, index) => (
-            <tr data-test="guessed-word" key={index}>
-                <td>{word.guessedWord}</td>
-                <td>{word.letterMatchCount}</td>
-            </tr>
+            <>
+                <div data-test="guessed-word">
+                    <span key={index}>{word.guessedWord}</span>
+                </div>
+            </>
         ));
 
+        const letterMatchRow = props.guessedWords.map((word, index) => {
+            return (
+                <>
+                    <div data-test="guessed-word" key={index}>{word.letterMatchCount}</div>
+                </>
+            )
+        });
+
         contents = (
-            <div data-test="guessed-words">
-                <h3>Guessed Words</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Guess</th>
-                            <th>Matching Letters</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {guessedWordsRows}
-                    </tbody>
-                </table>
-            </div>
+            <section data-test="guessed-words">
+                <h2 className="text-4xl m-5">Guessed Words</h2>
+                <div className="flexed-word-layout justify-center" >
+                    <section className="grid-word-layout border border-solid border-black">
+                        <div className="bg-gray-300 p-2 font-bold">Guess</div>
+                        <div className="bg-gray-300 p-2 font-bold">Matching Letters</div>
+                        <div>{guessedWordsRows}</div>
+                        <div className="font-bold text-green-500">{letterMatchRow}</div>
+                    </section>
+                </div>
+            </section>
         );
-    }
+    };
 
     return (
         <div data-test="component-guessed-words">

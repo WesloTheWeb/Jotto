@@ -6,11 +6,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <h1 className="font-sans md:font-serif font-extrabold text-7xl text-blue-600">Jotto App</h1>
       <Congrats success={false} />
-      <GuessedWords 
+      <GuessedWords
         secretWord={"party"}
         success={true}
-        guessedWords={[ {guessedWord: 'train', letterMatchCount: 3}]} />
+        guessedWords={[{ guessedWord: 'train', letterMatchCount: 3 }]} />
     </div>
   );
 }
