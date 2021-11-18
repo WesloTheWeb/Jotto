@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface InputProps {
-    success: boolean,
+    secretWord: string
 }
 
 const Input = (props: InputProps) => {
+
+    const [currentGuess, setCurrentGuess] = useState('');
+
     return (
-        <div data-test='component-input'>
+        <div data-test='component-input'>\
+            <form>
+                <input
+                    data-test="input-box"
+                    type="text"
+                    placeholder="enter guess"
+                    value={currentGuess}
+                    onChange={(evnt) => setCurrentGuess(evnt.target.value)} />
+                <button
+                    data-test="submit-button">
+                    Submit
+                </button>
+            </form>
         </div>
     );
 };
