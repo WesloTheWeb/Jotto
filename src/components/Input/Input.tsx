@@ -9,7 +9,7 @@ const Input = (props: InputProps) => {
     const [currentGuess, setCurrentGuess] = useState('');
 
     return (
-        <div data-test='component-input'>\
+        <div data-test='component-input'>
             <form>
                 <input
                     data-test="input-box"
@@ -17,8 +17,18 @@ const Input = (props: InputProps) => {
                     placeholder="enter guess"
                     value={currentGuess}
                     onChange={(evnt) => setCurrentGuess(evnt.target.value)} />
+                {/* <button
+                    data-test="submit-button"
+                    onClick={() => {
+                        
+                        setCurrentGuess('');
+                    }}> */}
                 <button
-                    data-test="submit-button">
+                    data-test="submit-button"
+                    onClick={() => {
+
+                        setCurrentGuess('');
+                    }}>
                     Submit
                 </button>
             </form>
