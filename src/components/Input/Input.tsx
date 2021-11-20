@@ -8,6 +8,10 @@ const Input = (props: InputProps) => {
 
     const [currentGuess, setCurrentGuess] = useState('');
 
+    if (success) {
+        return <div data-test='component-input' />
+    }
+
     return (
         <div data-test='component-input'>
             <form>

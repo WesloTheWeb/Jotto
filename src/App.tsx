@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div data-test='component-app' className="App">
       <h1 className="font-sans md:font-serif font-extrabold text-7xl text-blue-600">Jotto App</h1>
       <Congrats success={false} />
       <GuessedWords
