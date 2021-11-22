@@ -18,12 +18,12 @@ describe('If there are no words guessed', () => {
         wrapper = setup({ guessedWords: [] });
     });
 
-    test('renders without error', () => {
+    it('renders without error', () => {
         const component = findByTestAttr(wrapper, 'component-guessed-words');
         expect(component.length).toBe(1);
     });
 
-    test('renders instructions to guess a word', () => {
+    it('renders instructions to guess a word', () => {
         const instructions = findByTestAttr(wrapper, 'guess-instructions');
         expect(instructions.text().length).not.toBe(0);
     });
@@ -42,17 +42,17 @@ describe('If there are words guessed', () => {
         wrapper = setup({ guessedWords })
     });
 
-    test('renders without error', () => {
+    it('renders without error', () => {
         const component = findByTestAttr(wrapper, 'component-guessed-words');
         expect(component.length).toBe(1);
     });
 
-    test('renders "guessed words" section', () => {
+    it('renders "guessed words" section', () => {
         const guessedWordsNode = findByTestAttr(wrapper, 'guessed-words');
         expect(guessedWordsNode.length).toBe(1);
     });
 
-    test('correct number of letters for the secret word in guessed words', () => {
+    it('correct number of letters for the secret word in guessed words', () => {
         const guessedWordsNodes = findByTestAttr(wrapper, 'letters-matched-count');
         expect(guessedWordsNodes.length).toBe(guessedWords.length);
     });

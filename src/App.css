@@ -45,3 +45,26 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+.input-form-property {
+  border: 1px solid #000;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.form-container input {
+  border: 1px solid #000;
+}
+
+.form-container button {
+  border-radius: 10px;
+  color: #FFF;
+}
+
+.form-container button:hover {
+  background-color: #065F46;
+}
