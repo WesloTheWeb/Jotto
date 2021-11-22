@@ -6,7 +6,7 @@ const setup = () => {
   return shallow(<App />);
 };
 
-it('renders without errors', () => {
+it('should render without errors', () => {
   const wrapper = setup();
   const appComponent = findByTestAttr(wrapper, 'component-app');
   expect(appComponent).toHaveLength(1);

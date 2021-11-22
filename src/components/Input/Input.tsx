@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface InputProps {
-    secretWord: string
+    secretWord: string,
+    success: boolean
 }
 
 const Input = (props: InputProps) => {
-
     const [currentGuess, setCurrentGuess] = useState('');
 
-    if (success) {
+    if (props.success) {
         return <div data-test='component-input' />
     }
 
@@ -21,16 +21,9 @@ const Input = (props: InputProps) => {
                     placeholder="enter guess"
                     value={currentGuess}
                     onChange={(evnt) => setCurrentGuess(evnt.target.value)} />
-                {/* <button
-                    data-test="submit-button"
-                    onClick={() => {
-                        
-                        setCurrentGuess('');
-                    }}> */}
                 <button
                     data-test="submit-button"
                     onClick={() => {
-
                         setCurrentGuess('');
                     }}>
                     Submit
