@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 interface InputProps {
     secretWord: string,
-    success: boolean
+    success: boolean,
+    guessedWords: object
 }
 
 const Input = (props: InputProps) => {

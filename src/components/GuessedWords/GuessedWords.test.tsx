@@ -15,7 +15,25 @@ const setup = (props = {}) => {
 describe('If there are no words guessed', () => {
     let wrapper: any;
     beforeEach(() => {
-        wrapper = setup({ guessedWords: [] });
+        wrapper = setup({
+            secretWord: 'party',
+            success: false,
+            guessedWords: []
+        });
+    });
+
+    it('creates GuessedWords table with one row.', () => {
+        const guessedWordRows = findByTestAttr(wrapper, 'guessed-word');
+        expect(guessedWordRows).toHaveLength(1);
+    });
+
+    it('shows some of the guessed words', () => {
+        const  guessedWords = findByTestAttr(wrapper, 'guessed-words');
+        // expect(guessedWords).toHaveLength(0);
+    });
+
+    it('guess the secret word', () => {
+        
     });
 
     it('renders without error', () => {
