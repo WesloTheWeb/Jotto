@@ -1,3 +1,8 @@
+# Update as of Nov 23
+I am aborting this course as doing it with typescript and TDD isn't quite my style. However, I got what I needed to 
+learn with testing and jest. Nothing is functional here.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
